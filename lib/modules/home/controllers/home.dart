@@ -1,0 +1,8 @@
+import 'package:adove/global/utilities/sizes.dart';
+import 'package:get/get.dart';
+
+class HomeController extends GetxController {
+  static HomeController get to => Get.find<HomeController>();
+
+  final bool isMobile = Sizes.isMobile();
+}
