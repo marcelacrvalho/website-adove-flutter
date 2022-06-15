@@ -10,7 +10,7 @@ class MenuWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: Get.mediaQuery.size.height * 0.13,
+      height: 100.0,
       padding: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
         color: Theme.of(context).scaffoldBackgroundColor,

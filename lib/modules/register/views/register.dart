@@ -38,29 +38,25 @@ class RegisterView extends StatelessWidget {
               const MenuWidget(),
               const Divider(),
               SizedBox(
-                width: HomeController.to.isMobile
-                    ? Get.mediaQuery.size.width
-                    : Get.mediaQuery.size.width * 0.3,
+                width: Get.mediaQuery.size.width,
                 height: Get.mediaQuery.size.height,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                    mainAxisAlignment: HomeController.to.isMobile
+                    mainAxisAlignment: Sizes.isMobile()
                         ? MainAxisAlignment.start
                         : MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Padding(
-                        padding: HomeController.to.isMobile
-                            ? const EdgeInsets.all(0.0)
-                            : const EdgeInsets.all(16.0),
-                        child: const ImageAvatarWidget(
+                      const Padding(
+                        padding: EdgeInsets.all(2.0),
+                        child: ImageAvatarWidget(
                           path: 'assets/images/avatar-register.jpg',
                         ),
                       ),
                       TextWidget(
                         text: 'Quem não é visto, não é lembrado',
-                        textSize: HomeController.to.isMobile
+                        textSize: Sizes.isMobile()
                             ? Sizes.body1Mobile
                             : Sizes.body1Site,
                         isTextAlignCenter: true,
@@ -69,7 +65,7 @@ class RegisterView extends StatelessWidget {
                       TextWidget(
                         text:
                             'Permita ser encontrado por milhares de clientes no Brasil',
-                        textSize: HomeController.to.isMobile
+                        textSize: Sizes.isMobile()
                             ? Sizes.body2Mobile
                             : Sizes.body2Site,
                         isTextAlignCenter: true,

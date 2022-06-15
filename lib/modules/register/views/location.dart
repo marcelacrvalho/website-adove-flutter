@@ -37,9 +37,7 @@ class RegisterLocation extends StatelessWidget {
               const MenuWidget(),
               const Divider(),
               SizedBox(
-                width: Sizes.isMobile()
-                    ? Get.mediaQuery.size.width
-                    : Get.mediaQuery.size.width * 0.3,
+                width: Get.mediaQuery.size.width,
                 height: Get.mediaQuery.size.height,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -49,11 +47,9 @@ class RegisterLocation extends StatelessWidget {
                         : MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Padding(
-                        padding: HomeController.to.isMobile
-                      ? const EdgeInsets.all(0.0)
-                        : const EdgeInsets.all(16.0),
-                        child: const ImageAvatarWidget(
+                      const Padding(
+                        padding: EdgeInsets.all(2.0),
+                        child: ImageAvatarWidget(
                           path: 'assets/images/avatar-register.jpg',
                         ),
                       ),

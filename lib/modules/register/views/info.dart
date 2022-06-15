@@ -32,9 +32,7 @@ class RegisterInfo extends StatelessWidget {
               const MenuWidget(),
               const Divider(),
               Container(
-                width: HomeController.to.isMobile
-                    ? Get.mediaQuery.size.width
-                    : Get.mediaQuery.size.width * 0.3,
+                width: Get.mediaQuery.size.width,
                 height: Get.mediaQuery.size.height,
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
@@ -43,10 +41,12 @@ class RegisterInfo extends StatelessWidget {
                       : MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const ImageAvatarWidget(
-                      path: 'assets/images/avatar-register.jpg',
+                    const Padding(
+                      padding: EdgeInsets.all(2.0),
+                      child: ImageAvatarWidget(
+                        path: 'assets/images/avatar-register.jpg',
+                      ),
                     ),
-                    const Divider(),
                     TextWidget(
                       text: 'Está acabando',
                       textSize: HomeController.to.isMobile

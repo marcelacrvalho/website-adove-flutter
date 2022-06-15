@@ -10,9 +10,7 @@ class RowAppInformationWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _iconSize = HomeController.to.isMobile
-        ? Get.mediaQuery.size.width * 0.1
-        : Get.mediaQuery.size.width * 0.03;
+    const _iconSize = 30.0;
 
     return SizedBox(
       height: Get.mediaQuery.size.height * 0.5,
@@ -20,7 +18,7 @@ class RowAppInformationWidget extends StatelessWidget {
         children: [
           Expanded(
             child: _iconText(
-              Icon(
+              const Icon(
                 Icons.visibility,
                 size: _iconSize,
                 color: Colors.grey,
@@ -30,7 +28,7 @@ class RowAppInformationWidget extends StatelessWidget {
           ),
           Expanded(
             child: _iconText(
-              Icon(
+              const Icon(
                 Icons.event,
                 size: _iconSize,
                 color: Colors.grey,
@@ -40,7 +38,7 @@ class RowAppInformationWidget extends StatelessWidget {
           ),
           Expanded(
             child: _iconText(
-              Icon(
+              const Icon(
                 Icons.addchart_outlined,
                 size: _iconSize,
                 color: Colors.grey,
@@ -63,6 +61,7 @@ class RowAppInformationWidget extends StatelessWidget {
             child: TextWidget(
               text: text,
               isTextAlignCenter: true,
+              alignmentDirection: Alignment.center,
               textSize: HomeController.to.isMobile
                   ? Sizes.h1Mobile
                   : Sizes.h1Site,

@@ -1,5 +1,3 @@
-import 'package:adove/modules/contact/bindings/contact.dart';
-import 'package:adove/modules/contact/views/contact.dart';
 import 'package:adove/modules/home/bindings/home.dart';
 import 'package:adove/modules/home/views/home.dart';
 import 'package:adove/modules/information/bindings/information.dart';
@@ -52,11 +50,6 @@ class WebPages {
       name: Routes.kRegisterStoreName,
       page: () => RegisterStoreView(),
       binding: RegisterBinding(),
-    ),
-    GetPage(
-      name: Routes.kContact,
-      page: () => ContactView(),
-      binding: ContactBinding(),
     ),
     GetPage(
       name: Routes.kAbout,

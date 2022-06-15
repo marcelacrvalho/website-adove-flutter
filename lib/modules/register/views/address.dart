@@ -28,7 +28,7 @@ class RegisterAddress extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
-            mainAxisAlignment: HomeController.to.isMobile
+            mainAxisAlignment: Sizes.isMobile()
                 ? MainAxisAlignment.start
                 : MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
@@ -37,28 +37,24 @@ class RegisterAddress extends StatelessWidget {
               const Divider(),
               Container(
                 alignment: Alignment.center,
-                width: HomeController.to.isMobile
-                    ? Get.mediaQuery.size.width
-                    : Get.mediaQuery.size.width * 0.3,
+                width: Get.mediaQuery.size.width,
                 height: Get.mediaQuery.size.height,
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
-                  mainAxisAlignment: HomeController.to.isMobile
+                  mainAxisAlignment: Sizes.isMobile()
                       ? MainAxisAlignment.start
                       : MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Padding(
-                      padding: HomeController.to.isMobile
-                          ? const EdgeInsets.all(0.0)
-                          : const EdgeInsets.all(16.0),
-                      child: const ImageAvatarWidget(
+                    const Padding(
+                      padding: EdgeInsets.all(2.0),
+                      child: ImageAvatarWidget(
                         path: 'assets/images/avatar-register.jpg',
                       ),
                     ),
                     TextWidget(
                       text: 'Já está quase acabando',
-                      textSize: HomeController.to.isMobile
+                      textSize: Sizes.isMobile()
                           ? Sizes.body1Mobile
                           : Sizes.body1Site,
                       isTextAlignCenter: true,
@@ -66,7 +62,7 @@ class RegisterAddress extends StatelessWidget {
                     ),
                     TextWidget(
                       text: 'Aguente firme. Só mais algumas perguntas',
-                      textSize: HomeController.to.isMobile
+                      textSize: Sizes.isMobile()
                           ? Sizes.body2Mobile
                           : Sizes.body2Site,
                       isTextAlignCenter: true,

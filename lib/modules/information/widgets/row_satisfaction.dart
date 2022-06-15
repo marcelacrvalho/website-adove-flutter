@@ -58,7 +58,7 @@ class RowSatisfaction extends StatelessWidget {
           ),
           TextWidget(
             text: phrase,
-            textSize: Sizes.isMobile() ? Sizes.h1Mobile - 6 : Sizes.h1Site - 10,
+            textSize: Sizes.h1Site,
             alignmentDirection: Alignment.center,
             isTextAlignCenter: true,
           ),
